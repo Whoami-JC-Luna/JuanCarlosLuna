@@ -1,0 +1,344 @@
+---
+---
+@import 'libs/vars';
+@import 'libs/functions';
+@import 'libs/mixins';
+@import 'libs/skel';
+@import 'font-awesome.min.css';
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic');
+
+/*
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+	@include skel-breakpoints((
+		xlarge: '(max-width: 1680px)',
+		large: '(max-width: 1280px)',
+		medium: '(max-width: 980px)',
+		small: '(max-width: 736px)',
+		xsmall: '(max-width: 480px)',
+		xxsmall: '(max-width: 360px)'
+	));
+
+	@include skel-layout((
+		reset: 'full',
+		boxModel: 'border',
+		grid: ( gutters: 2em ),
+		breakpoints: (
+			large: (
+				grid: ( gutters: 1.5em )
+			),
+			small: (
+				grid: ( gutters: 1.25em )
+			)
+		)
+	));
+
+	@mixin inner {
+		> .inner {
+			@include padding(4em, 0);
+			margin: 0 auto;
+			max-width: _size(inner);
+			width: calc(100% - 6em);
+
+			@include breakpoint(small) {
+				@include padding(3em, 0);
+				width: calc(100% - 3em);
+			}
+		}
+	}
+
+// Base.
+
+	@import 'base/page';
+	@import 'base/typography';
+
+// Component.
+
+	@import 'components/section';
+	@import 'components/form';
+	@import 'components/box';
+	@import 'components/icon';
+	@import 'components/image';
+	@import 'components/list';
+	@import 'components/table';
+	@import 'components/button';
+	@import 'components/tiles';
+	@import 'components/contact-method';
+	@import 'components/spotlights';
+
+// Layout.
+
+	@import 'layout/header';
+	@import 'layout/banner';
+	@import 'layout/main';
+	@import 'layout/contact';
+	@import 'layout/footer';
+	@import 'layout/wrapper';
+	@import 'layout/menu';
+
+
+
+
+
+
+
+
+
+// Mis css 
+/* Línea central */
+/* Línea central */
+.roadmap {
+    position: relative;
+    padding: 20px 0;
+	
+}
+
+
+.roadmap::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background-color: #ffffff; /* Color de la línea */
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+/* Efecto de scroll para los items */
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+    padding: 15px;
+    // background-color: #435675;
+	border: 1px solid #a3cae9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(52, 107, 121, 0.1);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+    width: 45%;
+}
+
+.timeline-item.left {
+    left: 0;
+}
+
+.timeline-item.right {
+    right: 0;
+    margin-left: auto;
+}
+
+.timeline-item.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Conexión con la línea */
+.timeline-item::before {
+    position: absolute;
+//     width: 10px;
+//     height: 10px;
+//     background-color: #ffffff;
+//     border-radius: 50%;
+//     top: 20px;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     z-index: 2;
+}
+
+.timeline-item.left::before {
+	content: '→';
+    left: auto;
+    right: -20px;
+}
+
+.timeline-item.right::before {
+	content: '←';
+    right: -10px;
+	left: -20px;
+}
+
+/* Encabezados */
+.timeline-item h3 {
+    color: #ffffff;
+    font-size: 1.5rem;
+
+}
+
+.timeline-item p {
+    color: #d1d5db;
+    margin: 0;
+    font-size: 1rem;
+	display: none;
+}
+
+/* Hover effect */
+.timeline-item:hover {
+    background-color: #273953;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Efecto de Scroll */
+/* Estilo base para las tarjetas */
+// .roadmap-card {
+//     opacity: 0;
+//     transform: translateY(50px);
+//     transition: all 0.8s ease-out;
+// }
+
+// /* Mostrar la tarjeta cuando se revele */
+// .roadmap-card.revealed {
+//     opacity: 1;
+//     transform: translateY(0);
+// }
+
+// /* Posiciones izquierda y derecha */
+// .timeline-item.left {
+//     transform: translateX(-50px);
+//     color: aqua; /* Color del texto */
+// }
+
+// .timeline-item.right {
+//     transform: translateX(50px);
+//     color: aqua; /* Color del texto */
+// }
+
+// .timeline-item.left.revealed,
+// .timeline-item.right.revealed {
+//     transform: translateX(0);
+// }
+
+
+@media (max-width: 768px) {
+    .roadmap {
+        padding: 10px 0;
+    }
+
+    .roadmap::before {
+        display: none; /* Oculta la línea central en móviles */
+    }
+
+    .timeline-item {
+        width: 100%; /* Ocupa todo el ancho */
+        text-align: left; /* Alineación del texto */
+        margin-left: 0; /* Sin margen extra */
+        transform: translateY(50px); /* Mismo efecto de aparición */
+    }
+
+    .timeline-item::before {
+        display: none; /* Oculta los puntos de la línea */
+    }
+
+    /* Efecto de hover en móviles */
+    .timeline-item:hover {
+        background-color: #1e293b;
+        transform: translateY(-3px); /* Efecto ligero en hover */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Espaciado en el texto */
+    .timeline-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .timeline-item p {
+        font-size: 1rem;
+		display: none;
+    }
+}
+
+
+.image_fit_formacion img {
+	width: 100%;
+	height: 200px; /* Ajusta la altura según el recorte deseado */
+	object-fit: cover; /* Recorta la imagen manteniendo proporciones */
+	border-radius: 8px; /* Opcional: redondea las esquinas */
+  }
+
+
+
+  // Habilidades CSS
+
+  .skills-section {
+    padding: 60px 20px;
+    background-color: #2a2f43; /* Fondo sólido */
+    color: #ffffff;
+}
+
+.skills-section h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #3196a8;
+    position: relative;
+}
+
+.skills-grid {
+    display: flex;
+    flex-direction: column; /* Diseño lineal en vez de grid */
+    gap: 40px;
+}
+
+.skill-block {
+    border-left: 5px solid #3196a8; /* Barra decorativa a la izquierda */
+    padding: 20px;
+    background-color: #3a435f; /* Fondo ligeramente más oscuro */
+    transition: background-color 0.3s ease;
+}
+
+.skill-block:hover {
+    background-color: #2e384d; /* Cambio sutil al pasar el cursor */
+}
+
+.skill-block h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #6ea1c4;
+    position: relative;
+}
+
+.skill-block h3::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #3196a8;
+    margin-top: 8px;
+}
+
+.skill-block p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #d1d5db;
+    margin: 0;
+}
+
+/* Divisor entre bloques */
+.skill-divider {
+    height: 2px;
+    background-color: #4c5e7a;
+    margin: 20px 0;
+    border-radius: 2px;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.skills-grid {
+    animation: fadeIn 1s ease-in-out;
+}
