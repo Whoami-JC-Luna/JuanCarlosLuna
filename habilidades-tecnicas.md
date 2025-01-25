@@ -23,6 +23,7 @@ show_tile: true
                - LAMP <br>
                - Git & GitHub <br>
                - Linux - Fedora40</p>
+               - BBDD Relacionales SQL / PLSQL 
         </div>
         <div class="skill-divider"></div>
         <div class="skill-block">
