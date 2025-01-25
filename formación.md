@@ -1,5 +1,5 @@
 ---
-title: Formación y Soft Skills
+title: Formación - Certificaciones
 layout: formacion
 description: Descubre mis certificaciones, formación académica y habilidades clave.
 image: assets/images/JavaProgram.jpg
@@ -19,7 +19,7 @@ show_tile: true
 		</header>
 		<div class="roadmap-grid">
 			<div class="roadmap-card timeline-item left">
-				<h3>Ciclo Formativo de Grado Superior, Desarrollo de Aplicaciones Web (2023)</h3>
+				<h3>Ciclo Formativo de Grado Superior, Desarrollo de Aplicaciones Web</h3>
 				<p>
     <strong>Desarrollo de Aplicaciones con Tecnologías Web (IFC154_3)</strong><br>
     - Desarrollo de elementos software en el entorno cliente.<br>
@@ -96,37 +96,18 @@ show_tile: true
 		</div>
 	</div>
 </section>
-
-<!-- Three -->
-<section id="three" class="roadmap">
-	<div class="inner">
-		<header class="major">
-			<h2>Soft Skills</h2>
-		</header>
-		<p>Además de mis conocimientos técnicos, 
-		<br>cuento con habilidades clave como:</p>
-		<div class="roadmap-grid">
-			<div class="roadmap-card timeline-item left">
-				<h3>Trabajo en equipo</h3>
-				<p>Colaboración efectiva en entornos grupales.</p>
-			</div>
-			<div class="roadmap-card timeline-item right">
-				<h3>Resolución de problemas</h3>
-				<p>Capacidad para encontrar soluciones prácticas a retos tecnológicos.</p>
-			</div>
-			<div class="roadmap-card timeline-item left">
-				<h3>Comunicación</h3>
-				<p>Habilidad para transmitir ideas y resultados de manera efectiva.</p>
-			</div>
-			<div class="roadmap-card timeline-item right">
-				<h3>Adaptabilidad</h3>
-				<p>Capacidad de aprendizaje rápido en nuevas tecnologías.</p>
-			</div>
-		</div>
-	</div>
 	<br>
 	<br>
 	<br>
 	<br>
-</section>
+	<section id="two">
+				<div class="inner">
+					<header class="major">
+					  <h2>Puedes descargar mi currículum aquí</h2>
+					</header>
+					<ul class="actions">
+					  <li><a href="./assets/Profile.pdf" class="button icon fa-download">Descargar CV</a></li>
+					</ul>
+				</div>
+			</section>
 </div>
